@@ -7,8 +7,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
+
+import {UserService} from '././user.service';
+
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: LoginComponent },
+  { path: 'home', pathMatch: 'full', component: HomeComponent },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
@@ -25,7 +30,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

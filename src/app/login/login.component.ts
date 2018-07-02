@@ -1,3 +1,5 @@
+import { Router } from '@angular/Router';
+import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService, private router: Router) {  }
 
   ngOnInit() {
   }
 
-  hanldeClick() {
-    console.log('asdsd');
+  Auth() {
+    this.userService.AuthenticateUser();
+    this.router.navigate(['/home']);
+
   }
-
-
-
 }
