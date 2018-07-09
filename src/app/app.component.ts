@@ -6,4 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private _isLoggedIn: boolean;
+
+  ngInit() {
+    this._isLoggedIn = false;
+  }
+
+  Constructor() {
+    this._isLoggedIn = false;
+  }
+  getIsLoggedIn() {
+    return this._isLoggedIn;
+  }
+  setIsloggedIn(isLoggedIn: boolean) {
+    this._isLoggedIn = isLoggedIn;
+  }
 }

@@ -9,9 +9,30 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="hold-transition sidebar-mini">
-    <div class="wrapper">
 
-      <app-root></app-root>
+  <div class="wrapper" *ngIf="false">
+
+    <app-nav-bar *ngIf="false"></app-nav-bar>
+
+    <app-side-bar *ngIf="false"></app-side-bar>
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" *ngIf="false">
+
+    <app-header *ngIf="false"></app-header>
+
+
+    <app-root></app-root>
+    <!-- Main content -->
+    <!-- <section class="content">
+        <app-root></app-root>
+    </section> -->
+    <!-- /.content -->
+
+  </div>
+  <!-- /.content-wrapper -->
+
+  <app-footer *ngIf="false"></app-footer>
 
     </div>
     <!-- ./wrapper -->

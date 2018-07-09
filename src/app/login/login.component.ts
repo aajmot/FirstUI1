@@ -1,4 +1,4 @@
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   Auth() {
     this.userService.AuthenticateUser();
-    this.router.navigate(['/home']);
+    // this.router.navigate(['/home']);
 
   }
 }
