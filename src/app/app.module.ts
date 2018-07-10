@@ -15,13 +15,16 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ClientComponent } from './client/client.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', pathMatch: 'full', component: HomeComponent },
+  { path: 'client', pathMatch: 'full', component: ClientComponent },
   // otherwise redirect to home
-  { path: '**', redirectTo: '/login', pathMatch: 'full' }
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -32,7 +35,9 @@ const routes: Routes = [
     NavBarComponent,
     SideBarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ClientComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,14 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [UserService, HttpModule, HttpClientModule],
-  bootstrap: [AppComponent]
+  bootstrap:
+    [
+      AppComponent,
+      NavBarComponent,
+      SideBarComponent,
+      HeaderComponent,
+      FooterComponent
+    ]
 })
 export class AppModule implements OnInit {
 

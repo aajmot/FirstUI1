@@ -10,31 +10,30 @@
 </head>
 <body class="hold-transition sidebar-mini">
 
-  <div class="wrapper" *ngIf="false">
+  <div class="wrapper">
 
-    <app-nav-bar *ngIf="false"></app-nav-bar>
+    <app-nav-bar *ngIf="user.isLoggedIn"></app-nav-bar>
 
-    <app-side-bar *ngIf="false"></app-side-bar>
+    <app-side-bar *ngIf="user.isLoggedIn"></app-side-bar>
 
- <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" *ngIf="false">
+   <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
 
-    <app-header *ngIf="false"></app-header>
-
-
-    <app-root></app-root>
-    <!-- Main content -->
-    <!-- <section class="content">
-        <app-root></app-root>
-    </section> -->
-    <!-- /.content -->
+      <app-header *ngIf="user.isLoggedIn"></app-header>
+      <!-- Main content -->
+      <section class="content">
+          <div class="container-fluid">
+            <app-root></app-root>
+          </div>
+      </section>
+      <!-- /.content -->
 
   </div>
   <!-- /.content-wrapper -->
 
-  <app-footer *ngIf="false"></app-footer>
+  <app-footer *ngIf="user.isLoggedIn"></app-footer>
 
-    </div>
-    <!-- ./wrapper -->
+  </div>
+  <!-- ./wrapper -->
 </body>
 </html>
